@@ -1,0 +1,26 @@
+const getIntersectionNode = (headA, headB) => {
+    let tortoise = headA, hare = headA, curr = headA;
+    while (curr) {
+        if (!curr.next) {
+            curr.next = headB;
+            break;
+        }
+        curr = curr.next;
+    }
+    while (tortoise && hare) {
+        tortoise = tortoise.next;
+        hare = hare.next ? hare.next.next : null;
+        if (tortoise === hare) {
+            break;
+        }
+    }
+    while (headA && hare) {
+        if (headA === hare) {
+            break;
+        }
+        headA = headA.next;
+        hare = hare.next;
+    }
+    if (curr) curr.next = null;
+    return hare;
+};
