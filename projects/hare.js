@@ -37,4 +37,27 @@ function duplexer(list){
     //if(curr) list[list.indexOf(curr)+1] = null;
     return hare;
 }
-console.log(duplexer([1,2,3,4,4]));
+
+function findDuplicateNum(Arr) {        
+  let tortoise = Arr[0];
+  let hare = Arr[0];
+  
+  do {
+    //tortoise = Arr[tortoise];
+    tortoise = Arr[Arr.indexOf(tortoise)];
+    //hare = Arr[Arr[hare]];
+    hare = Arr[Arr[Arr.indexOf(hare)]];
+  }while(tortoise != hare);   
+  
+  hare = Arr[0];
+  
+  while(tortoise != hare) {
+    tortoise = Arr[tortoise];
+    hare = Arr[hare];
+  }
+  
+  return hare;        
+}
+
+//console.log(duple,xer([1,2,3,4,4]));
+//console.log(findDuplicateNum([1,2,2,3,4]));
