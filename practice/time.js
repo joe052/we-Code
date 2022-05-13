@@ -31,6 +31,20 @@ function readLine() {
 
 function timeConversion(s) {
     // Write your code here
+    s.replace(/:/g, '');
+    
+    var hours = Number(s.slice(0,2));
+    var minutes = Number(s.slice(2,4));
+    var seconds = Number(s.slice(4,6));
+    var AMPM = s.slice(6,8);
+    if (AMPM === "PM" && hours < 12) hours = hours + 12;
+    if (AMPM === "AM" && hours === 12) hours = hours - 12;
+    var sHours   = hours.toString();
+    var sMinutes = minutes.toString();
+    var sSeconds = seconds.toString();
+    if (hours < 10) sHours = "0" + sHours;
+    if (minutes < 10) sMinutes = "0" + sMinutes;
+    return (sHours + ":" + sMinutes + ":" + sSeconds);
 
 }
 
