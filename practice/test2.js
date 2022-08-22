@@ -1,11 +1,14 @@
-const x = 5;
-const y = Math.random()* 10;
-function provRandom(){
-  return x *y;
+const maxLimit = 100;
+const y = provRandom(maxLimit);
+
+function provRandom(max){
+  return Math.floor(Math.random()*max);
 }
 
-if(provRandom()== 0){
+if( y < 50){
   console.log("you are lucky");
 }else{
   console.log("bad karma!!");
 }
+
+console.log(y);
