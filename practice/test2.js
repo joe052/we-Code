@@ -18,10 +18,12 @@ function plusMinus(arr) {
     }
   }
 
+  //do the math
   let positive =   Number(pos.length / arr.length).toFixed(6);
   let negative =   Number(neg.length / arr.length).toFixed(6);
   let zeros =   Number(zero.length / arr.length).toFixed(6);
-  
+
+  //log the answer
   console.log(positive);
   console.log(negative);
   console.log(zeros);
