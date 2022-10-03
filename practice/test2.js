@@ -19,7 +19,12 @@ function plusMinus(arr) {
   }
 
   let positive =   Number(pos.length / arr.length).toFixed(6);
+  let negative =   Number(neg.length / arr.length).toFixed(6);
+  let zeros =   Number(zero.length / arr.length).toFixed(6);
+  
   console.log(positive);
+  console.log(negative);
+  console.log(zeros);
 }
 
-plusMinus([3,5,6,7,8,9]);
+plusMinus([-4, 3, -9, 0, 4, 1]);
