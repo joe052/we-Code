@@ -1,6 +1,5 @@
 function plusMinus(arr) {
   let x = arr.length;
-  console.log(x);
   
   //sort the numbers from positive,negative and zeros
   let pos = [];
