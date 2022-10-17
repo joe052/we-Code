@@ -21,7 +21,10 @@ class Calculator {
   }
 
   modulo(){
-    return this.x % this.y;
+    if(this.x > this.y){
+     return this.x % this.y;
+    }
+    return this.y % this.x;
   }
 }
 
