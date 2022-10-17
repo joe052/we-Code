@@ -19,6 +19,10 @@ class Calculator {
   divide() {
     return this.x / this.y;
   }
+
+  modulo(){
+    return this.x % this.y;
+  }
 }
 
 
